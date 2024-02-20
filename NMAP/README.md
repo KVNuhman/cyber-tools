@@ -11,6 +11,7 @@ Victim Machine
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/9485c422-cf7b-470c-9fa9-e402b9931bbf)
 
 Attacker Machine
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/d648ca15-c1c6-4d59-810f-009703687a28)
 
 ### b) What is a firewall,andmention its types. Use the NMAP command to detect that a firewall protects the host.
@@ -40,12 +41,15 @@ Victim Machine when firewall is on
 Attacker Machine
 
 There is no response. So it’s likely that a firewall is protecting the host
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/3e74a3d7-a37d-47b3-9130-a4761bb680c6)
 
 Victim Machine when firewall is off
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/e7c27784-f6e1-4866-a8fa-d82b429cb0a1)
 
 Attacker Machine
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/d86c44a8-aa22-4dbf-921e-aaead8001543)
 
 ### c) Use the NMAP command to scan a network and determine which devices are up and running.
@@ -53,6 +57,7 @@ Attacker Machine
 Command - `nmap -sn <ip>/<CIDR>`
 
 Attacker Machine
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/8af1bb5d-3a0e-4c16-a616-25778747cf95)
 
 ### d) What are vertical and horizontal scanning?
@@ -65,6 +70,7 @@ Attacker Machine
 Attacker Machine
 
 WE need to add the ip address of the Victim Machine `192.168.213.130` to `/etc/hosts file`.
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/b787df91-e6dd-4f47-823a-b31419f40be8)
 
 ### f) Use NMAP commands to export the output in XML format.
@@ -129,6 +135,7 @@ sudo `nmap --script http-exif-spider <website>`
 Attacker Machine
 
 Appliying on Victim Machine
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/7fec1638-4aa1-4002-b00b-51db9e1248fa)
 
 ### 3. Use NMAP NSE to find all subdomains of the website.
