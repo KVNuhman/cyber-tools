@@ -1,19 +1,20 @@
 ## Use the tool NMAP [Command line only]to perform the below task. Run Wireshark in the background and capture only the necessary packets to showcase for the corresponding question.
-a) Explain the subnet and use the NMAP Command to scan the services for the whole subnet.
+
+### a) Explain the subnet and use the NMAP Command to scan the services for the whole subnet.
+
 A subnet, short for subnetwork, is a logical subdivision of an IP network. It allows for the division of a larger network into smaller, manageable parts. Subnetting is primarily used to improve network performance, security, and organization. Each device on a network is assigned an IP address, and subnetting helps in efficient routing of data packets within the network.
 
 Command to scan entire subnet `nmap -sV <subnet/CIDR notation>`
 
 Victim Machine
 
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/7cda7c05-25e9-4208-9ab9-ae38673bc415)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/9485c422-cf7b-470c-9fa9-e402b9931bbf)
 
 Attacker Machine
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/146e5958-f0c2-4f38-9996-e173d9bd4c82)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/d648ca15-c1c6-4d59-810f-009703687a28)
 
+### b) What is a firewall,andmention its types. Use the NMAP command to detect that a firewall protects the host.
 
-
-b) What is a firewall,andmention its types. Use the NMAP command to detect that a firewall protects the host.
 Firewall
 A firewall is a type of network security appliance that keeps an eye on and regulates inbound and outgoing network traffic in accordance with pre-established security rules. Its main goal is to defend devices and networks from malicious activity, assaults, and unauthorised access. It is possible to deploy firewalls using hardware, software, or a combination of the two. They function by looking at network traffic packets and comparing them to the administrator's preset rules or policies.
 
@@ -34,36 +35,79 @@ In this command:
 
 Victim Machine when firewall is on
 
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/b59deea9-7a0e-490f-b4ab-af474857cb39)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/2843b316-e77e-4a08-9cd0-a13d73cfd631)
 
 Attacker Machine
 
 There is no response. So it’s likely that a firewall is protecting the host
-`need to add image`
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/3e74a3d7-a37d-47b3-9130-a4761bb680c6)
 
 Victim Machine when firewall is off
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/4f1f809d-f044-4919-8a65-a449dc3cd946)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/e7c27784-f6e1-4866-a8fa-d82b429cb0a1)
 
 Attacker Machine
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/4b853148-4b7b-4501-84fb-32c2b53a59fa)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/d86c44a8-aa22-4dbf-921e-aaead8001543)
 
-c) Use the NMAP command to scan a network and determine which devices are up and running.
-Command - nmap -sn <ip>/<CIDR> 
+### c) Use the NMAP command to scan a network and determine which devices are up and running.
+
+Command - `nmap -sn <ip>/<CIDR>`
 
 Attacker Machine
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/c37a3e67-8b40-4ab7-9f14-0577fe7b2648)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/8af1bb5d-3a0e-4c16-a616-25778747cf95)
 
-d) What are vertical and horizontal scanning?
-`Horizontal scanning`  sends requests to the same port on different hosts. Attackers use horizontal scanning to prepare for a mass attack.
-Vertical scanning` sends requests to different ports on the same host. Attackers typically use vertical scanning to look for vulnerabilities in a preselected target.
-e) Use the NMAP command to scan multiple hosts. [HINT: Add hosts into a file and scan it].
+### d) What are vertical and horizontal scanning?
+
+`Horizontal scanning` sends requests to the same port on different hosts. Attackers use horizontal scanning to prepare for a mass attack.
+`Vertical scanning` sends requests to different ports on the same host. Attackers typically use vertical scanning to look for vulnerabilities in a preselected target.
+
+### e) Use the NMAP command to scan multiple hosts. [HINT: Add hosts into a file and scan it].
+
 Attacker Machine
 
 WE need to add the ip address of the Victim Machine `192.168.213.130` to `/etc/hosts file`.
-![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/49506d0c-9d4e-41d3-8770-1454d8499e68)
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/b787df91-e6dd-4f47-823a-b31419f40be8)
 
-f) Use NMAP commands to export the output in XML format.
+### f) Use NMAP commands to export the output in XML format.
+
 Attacker Machine
 
 Use the `nmap -sV <target-ip> -oX name.xml`
 
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/b79a7a1a-d205-4287-b9bd-79b3d1b47bff)
+
+g) Use the NMAP command to get OS information about a host.
+Attacker Machine
+
+`nmap -O <target-ip>`
+
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/dc595014-873e-4718-9a98-b5d6386af4fd)
+
+### h) Explain ping sweeping and Perform ping sweeping using Nmap
+
+Ping Sweep
+A method of network reconnaissance called "ping sweeping" is used to find out which IP addresses are active and reachable within a network. To find out which IP addresses are reachable and available, it entails sending a string of ICMP echo request messages, or pings, to a variety of addresses, usually in a sequential manner.
+
+Network administrators frequently use ping sweeping to map the network and find active hosts.
+
+Nmap command to perform ping sweep - `nmap -sn <network address>/<CIDR>`.
+
+Attacker Machine
+
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/8af1bb5d-3a0e-4c16-a616-25778747cf95)
+
+## Try these below questions after completing the above commands.
+
+### 1. What is a web application firewall? How do you use Nmap to detect a WAF? Perform WAF fingerprint detection using NMAP.
+
+A Web Application Firewall (WAF) is a security tool designed to protect web applications from various attacks, such as SQL injection, cross-site scripting (XSS), and other common web exploits. WAFs monitor and filter HTTP traffic between a web application and the Internet, identifying and blocking malicious requests before they reach the application.
+
+To detect a WAF using Nmap, you can use its HTTP WAF fingerprinting feature. This feature sends specially crafted HTTP requests to the target web server and analyzes the responses to identify patterns that indicate the presence of a WAF.
+
+sudo nmap --script http-waf-fingerprint <target>
+
+Victim Machine when firewall is on
+
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/2843b316-e77e-4a08-9cd0-a13d73cfd631)
+
+Attacker Machine
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/7df7b3f0-28b4-49f9-ab40-de8606304c86)
