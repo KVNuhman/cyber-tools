@@ -39,7 +39,7 @@ Victim Machine when firewall is on
 Attacker Machine
 
 There is no response. So it’s likely that a firewall is protecting the host
-
+`need to add image`
 
 Victim Machine when firewall is off
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/4f1f809d-f044-4919-8a65-a449dc3cd946)
@@ -47,4 +47,23 @@ Victim Machine when firewall is off
 Attacker Machine
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/4b853148-4b7b-4501-84fb-32c2b53a59fa)
 
+c) Use the NMAP command to scan a network and determine which devices are up and running.
+Command - nmap -sn <ip>/<CIDR> 
+
+Attacker Machine
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/c37a3e67-8b40-4ab7-9f14-0577fe7b2648)
+
+d) What are vertical and horizontal scanning?
+`Horizontal scanning`  sends requests to the same port on different hosts. Attackers use horizontal scanning to prepare for a mass attack.
+Vertical scanning` sends requests to different ports on the same host. Attackers typically use vertical scanning to look for vulnerabilities in a preselected target.
+e) Use the NMAP command to scan multiple hosts. [HINT: Add hosts into a file and scan it].
+Attacker Machine
+
+WE need to add the ip address of the Victim Machine `192.168.213.130` to `/etc/hosts file`.
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/49506d0c-9d4e-41d3-8770-1454d8499e68)
+
+f) Use NMAP commands to export the output in XML format.
+Attacker Machine
+
+Use the `nmap -sV <target-ip> -oX name.xml`
 
