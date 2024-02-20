@@ -82,6 +82,8 @@ Attacker Machine
 
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/dc595014-873e-4718-9a98-b5d6386af4fd)
 
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/aa17409d-8fde-4b1a-a5c6-28a462a99610)
+
 ### h) Explain ping sweeping and Perform ping sweeping using Nmap
 
 Ping Sweep
@@ -110,4 +112,37 @@ Victim Machine when firewall is on
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/2843b316-e77e-4a08-9cd0-a13d73cfd631)
 
 Attacker Machine
+
 ![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/7df7b3f0-28b4-49f9-ab40-de8606304c86)
+
+### 2.What is EXIF data? Tryto find EXIF data of images on a website using NMAP NSE.
+
+EXIF DATA
+-EXIF (Exchangeable Image File Format) data is a standard for storing metadata in image files, typically used by digital cameras and smartphones. This metadata can include information such as the camera model, exposure settings, GPS coordinates, and timestamps.
+
+-To find EXIF data of images on a website using Nmap NSE (Nmap Scripting Engine), you can use the http-exif-spider script. This script crawls a website, downloads images, and extracts EXIF data from them. Here's how you can do it:
+
+sudo `nmap --script http-exif-spider <website>`
+
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/58c9eb01-9e78-4d01-bbb7-08cfe7d6756b)
+
+Attacker Machine
+
+Appliying on Victim Machine
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/7fec1638-4aa1-4002-b00b-51db9e1248fa)
+
+### 3. Use NMAP NSE to find all subdomains of the website.
+
+All the nse scripts are loacated in `/usr/share/nmap/scripts/`
+
+`sudo nmap --script dns-brute <website>`
+
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/f55e03bc-2204-4414-b5ad-131bd0e57b31)
+
+### 4. Perform a vulnerability scan on the target host using NMAP NSE.
+
+Command - `nmap -sV --script=vuln <target ip>`
+
+Attacker Machine
+
+![image](https://github.com/KVNuhman/cybersecurity-tools/assets/46161259/76d93208-e489-4822-addb-58aaf5266d01)
